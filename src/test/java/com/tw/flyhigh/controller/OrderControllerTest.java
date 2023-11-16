@@ -109,15 +109,5 @@ class OrderControllerTest {
             .andExpect(status().isInternalServerError())
             .andExpect(content().string("服务异常，请稍后再试"));
     }
-
-    @Test
-    void should_cancel_order_successful() throws Exception {
-        doNothing().when(this.orderServiceImpl).cancelOrder(any());
-
-        String temp = "没有意义的字符串";
-        System.out.println(temp);
-
-        Assertions.assertTrue(true);
-    }
 }
 
